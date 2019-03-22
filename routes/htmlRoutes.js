@@ -34,6 +34,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/membersui.html"));
   });
 
+  app.get("/mapui", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/mapui.html"));
+  });
+
   app.get("/resources", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/resources.html"));
   });
